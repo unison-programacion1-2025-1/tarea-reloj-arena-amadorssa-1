@@ -11,10 +11,10 @@ def reloj_arena(m: int, s: str) -> str:
     for i in range(m):
         espacios = i
         chars = (2 * m - 1) - (2 * i)
-        print(' ' * espacios + s * chars)
-    
-    # Parte inferior: del mínimo al ancho máximo (espejo de la superior)
+        print((" " * espacios) + (s * chars))
+
+    # Parte inferior (m - 1 líneas)
     for i in range(m - 2, -1, -1):
         espacios = i
         chars = (2 * m - 1) - (2 * i)
-        print(' ' * espacios + s * chars)
+        print((" " * espacios) + (s * chars))
