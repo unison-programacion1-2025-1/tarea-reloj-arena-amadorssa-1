@@ -9,12 +9,14 @@ def reloj_arena(m: int, s: str) -> str:
     # TODO: implementar la lógica para generar el reloj de arena en ASCII
     # Parte superior: de ancho máximo al mínimo (punto central)
     for i in range(m):
-        espacios = i
-        chars = (2 * m - 1) - (2 * i)
-        print((" " * espacios) + (s * chars))
+        espacios = ' ' * i
+        repeticiones = (2 * m - 1) - (2 * i)
+        print(espacios + s * repeticiones)
 
-    # Parte inferior (m - 1 líneas)
+    # Parte inferior: triángulo creciente
+    # Usamos la misma fórmula matemática pero invertimos el rango del iterador
+    # i va desde m-2 bajando hasta 0
     for i in range(m - 2, -1, -1):
-        espacios = i
-        chars = (2 * m - 1) - (2 * i)
-        print((" " * espacios) + (s * chars))
+        espacios = ' ' * i
+        repeticiones = (2 * m - 1) - (2 * i)
+        print(espacios + s * repeticiones)
